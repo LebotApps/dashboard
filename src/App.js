@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+
+import Dashboard from "./components/Dashboard";
+import Number from "./components/Number";
 import './App.css';
+import AverageRating from "./components/AverageRating";
+import SentimentAnalysis from "./components/SentimentAnalysis";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+   <Dashboard />
+   <div className="reviewsBox">
+   <Number />
+   </div>
+   <div className="reviewsBox">
+     <AverageRating />
+   </div>
+   <div className="reviewsBox">
+     <SentimentAnalysis />
+   </div>
+   </div>
   );
 }
 
